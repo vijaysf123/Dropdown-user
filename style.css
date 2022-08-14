@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;1,300&display=swap'); */
+{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(45deg,#ffaf00,#bb02ff);
+}
+.card{
+    position: relative;
+    width: 300px;
+    height: 80px;
+    overflow: hidden;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 50px 50px rgba(0,0,0,0.2);
+}
+.card .content{
+    display: flex;
+    align-items: center;
+}
+.card .content .imgBx{
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+.card .content .imgBx>img{
+    position: absolute;
+    top: 00;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.card .content h2{
+    margin-left: 15px;
+    font-size: 1.3em;
+}
+.card .content h2 span{
+    font-size: 0.8rem;
+    color: #788;
+}
+
+.navigation{
+    position: relative;
+    top: 25px;
+    left: -30px;
+    border-top: 1px solid rgba(0, 0, 0, 0.3);
+}
+.navigation li{
+   list-style: none;
+   margin: 15px 0;
+}
+.navigation li a{
+   text-decoration: none;
+   display: flex;
+   align-items: center;
+   color: #555;
+   font-size: 1.1em;
+   transition: 0.3s all;
+}
+.navigation li a:hover{
+    color: #36b3ff;
+}
+.navigation li a ion-icon{
+    font-size: 1.6em;
+    margin-right: 15px;
+}
+.toggle{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    bottom: 0;
+    right: 0;
+    background-color: #36b3ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.toggle ion-icon{
+    color: #fff;
+    font-size: 1.4em;
+    transition: ease-in-out 0.3s all;
+}
+.card.active .toggle ion-icon{
+    transform: rotate(180deg);
+}
+.card.active{
+    height: 350px;
+}
